@@ -1,0 +1,18 @@
+<a href="/exercises">Home</a>
+
+<ul>
+    <li>
+        <a href="/exercises/new">New Exercise</a>
+    </li>
+    <% if(currentClient){ %>
+        <li>Welcome <%= currentClient.username %></li>
+        <li>
+            <form action="/sessions?_method==DELETE" method="post">
+                <input type="submit" value="Log Out">
+            </form>
+        </li>
+        <% } else { %>
+            <li><a href="/users/new">Sign Up</a></li>
+            <li><a href="/sessions/new">Log In</a></li>
+        <% } %>
+</ul>
