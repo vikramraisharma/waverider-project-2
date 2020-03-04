@@ -2,7 +2,11 @@
     /* border: 1px solid red; */
     margin: 0;
     padding: 0;
-    background-color: #9c9c9c;
+    
+
+}
+body{
+    background-image: linear-gradient(lightgrey, black);
 }
 header{
     text-align: center;
@@ -69,6 +73,7 @@ nav li{
     padding-top: 1%;
 }
 .index-container{
+
     width: 50%;
     display: flex;
     flex-direction: column;
