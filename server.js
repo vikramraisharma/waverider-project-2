@@ -7,7 +7,6 @@ const session = require('express-session')
 //config
 require('dotenv').config()
 const app = express()
-const db = mongoose.connection
 const PORT = process.env.PORT
 const mongodbURI = process.env['MONGODB_URI'] || 'mongodb://localhost:27017/proving_grounds'
 
