@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <%- include('../partials/head.ejs') %>
     </head>
     <body>
-        Exercise: <%= exercise.name %>
-        Description: <%= exercise.description %>
-        Primary Muscle Group(s): <%= exercise.muscleGroup %>
-        <a href="/exercises">Back to Home</a>
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
+        <nav>
+            <%- include('../partials/nav.ejs') %>
+        </nav>
+        <div class="show-container">
+            Exercise: <%= exercise.name %> <br>
+            <!-- <iframe width="560" height="315" src="<%= exercise.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br> -->
+            <div class="information-container">
+                Description: <%= exercise.description %> <br>
+                Primary Muscle Group(s): <%= exercise.muscleGroup %> <br>
+            </div>
+            <a href="/exercises">Back to Home</a>
+        </div>
     </body>
 </html>

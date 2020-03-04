@@ -1,0 +1,135 @@
+*{
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    background-color: #9c9c9c;
+}
+header{
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(237, 168, 50, 0.7);
+    text-shadow: 2px 2px white;
+    border-radius: 15px;
+}
+#header{
+    color: black;
+}
+#header:hover{
+    color: #0b0861;
+}
+h1{
+    background-color: rgba(237, 168, 50, 0.1);
+}
+nav{
+    padding: 15px;
+    width: 60%;
+    display: flex;
+    height: 20%;
+    flex-direction: row;
+    margin: auto;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+}
+nav button{
+    height: 50px;
+    width: 125px;
+    background-color: rgba(237, 168, 50, 0.8);
+    border-radius: 5px;
+}
+nav button:hover{
+
+    background-color: #0b0861;
+    color: white
+}
+nav form{
+    border: none;
+}
+nav input{
+    height: 50px;
+    width: 125px;
+    margin: 0;
+    padding: 0;
+    color: rgba(237, 168, 50, 0.8);
+    border-radius: 5px;
+}
+nav input:hover{
+    background-color: #0b0861;
+    color: white;
+}
+nav li{
+    text-align: center;
+    /* padding: 5%; */
+}
+#username{
+    padding-top: 1%;
+}
+.index-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.index-container ul li{
+    list-style-type: none;
+    padding: 5px;
+    text-align:center;
+}
+/* .exercise-link{
+    text-align: center;
+} */
+.exercisebtn{
+    height: 75px;
+    width: 200px;
+    font-size: 24px;
+    background-color: #0b0861;
+    color: white;
+    border-radius: 10px;
+}
+.exercisebtn:hover{
+    color: rgba(237, 168, 50, 0.8);
+}
+.editbtn{
+    border: none;
+}
+.editbtn:hover{
+    color: white;
+}
+.login-header{
+    width: 75%;
+    text-align: center;
+    padding: 15px;
+    margin: 15px auto;
+}
+.form-div{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+.form-div form{
+    padding: 8px;
+    background-color: #474747;
+    border-radius: 7px;
+}
+form label{
+    background-color: #474747;
+    color: rgba(237, 168, 50, 1);
+}
+form input{
+    margin:auto;
+    background-color: white;
+    color: black;
+}
+.submitbtn{
+    margin: auto;
+    padding: 10px;
+    background-color: #0b0861;
+    color: white;
+    border-radius: 5px;
+}

@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <%- include('../partials/head.ejs') %>
     </head>
     <body>
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
         <nav>
-            <a href="/exercises">Home</a>
-
-            <ul>
-                <li>
-                    <a href="/exercises/new">New Exercise</a>
-                </li>
-                <% if(currentClient){ %>
-                    <li>Welcome <%= currentClient.username %></li>
-                    <li>
-                        <form action="/sessions?_method==DELETE" method="post">
-                            <input type="submit" value="Log Out">
-                        </form>
-                    </li>
-                    <% } else { %>
-                        <li><a href="/clients/new">Sign Up</a></li>
-                        <li><a href="/sessions/new">Log In</a></li>
-                    <% } %>
-            </ul>
+            <%- include('../partials/nav.ejs') %>
         </nav>
-        <ul>
-            <% for (let exercise of exercises) { %>
-                <li>
-                    <a href="/exercises/<%=exercise._id%>">
-                      <%= exercise.name %>
-                    </a>
-                    <a href="/exercises/<%=exercise._id%>/edit">
-                        edit
-                    </a>
-                  </li>
-            <% } %>
-        </ul>
-        <a href="/exercises/new">New Exercise</a>
+        <div class="index-container">
+            <ul>
+                <% for (let exercise of exercises) { %>
+                    <li>
+                        <a href="/exercises/<%=exercise._id%>" class="exercise-link">
+                            <button type="button" class="exercisebtn"><%= exercise.name %></button>
+                        </a>
+                        <br>
+                        <a href="/exercises/<%=exercise._id%>/edit">
+                            <button type="button" class="editbtn">EDIT</button>
+                        </a>
+                      </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <!-- <a href="/exercises/new">New Exercise</a> -->
     </body>
 </html>

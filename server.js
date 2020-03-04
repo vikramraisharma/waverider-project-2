@@ -40,7 +40,11 @@ app.use('/exercises', exerciseController)
 const sessionsController = require('./controllers/sessions_controller.js')
 app.use('/sessions', sessionsController)
 const clientController = require('./controllers/client_controller.js')
-app.use('/client/', clientController)
+app.use('/clients', clientController)
+// const trainerController = require('./controllers/trainer_controller.js')
+// app.use('/trainers', trainerController)
+// const accountsController = require('./controllers/accounts_controller.js')
+// app.use('/accounts', accountsController)
 
 //routes
 app.get('/', (req, res) => {

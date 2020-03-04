@@ -2,12 +2,26 @@ const express = require('express')
 const Exercise = require('../models/exercise.js')
 const exercises = express.Router()
 
+const isAuthenticated = (req, res, next) => {
+    if(req.session.currentClient){
+        return next()
+    }else{
+        res.redirect('/sessions/new')
+    }
+}
 
+// const isAuthenticated = (req, res, next) => {
+//     if(req.session.currentAccount){
+//         return next()
+//     }else{
+//         res.redirect('/sessions/new')
+//     }
+// }
 
 //presentational routes
 
 //new
-exercises.get('/new', (req, res) => {
+exercises.get('/new', isAuthenticated, (req, res) => {
     res.render('exercises/new.ejs', {
         currentClient: req.session.currentClient
     })
@@ -15,7 +29,7 @@ exercises.get('/new', (req, res) => {
 
 
 //edit
-exercises.get('/:id/edit', (req, res) => {
+exercises.get('/:id/edit', isAuthenticated, (req, res) => {
     Exercise.findById(req.params.id, (err, foundExercise) => {
         res.render('exercises/edit.ejs', {
             exercise: foundExercise,
@@ -25,7 +39,7 @@ exercises.get('/:id/edit', (req, res) => {
 })
 
 //show
-exercises.get('/:id', (req, res) => {
+exercises.get('/:id', isAuthenticated, (req, res) => {
     Exercise.findById(req.params.id, (err, foundExercise) => {
         res.render('exercises/show.ejs', {
             exercise: foundExercise,
@@ -52,6 +66,7 @@ exercises.get('/setup/seed', (req, res) => {
             {
                 name: 'Squat',
                 description: 'An exercise mainly targeting the legs and posterior chain that tests your core stability. Advance variations include: Front squat, Low-bar squat, and Hatfield squat.',
+                video: "www.youtube.com/embed/BnQhf9RV2Uk",
                 muscleGroup: 'Legs, Posterior Chain, Core',
                 isHard: true
             },
@@ -74,14 +89,14 @@ exercises.get('/setup/seed', (req, res) => {
 
 //functional routes
 //delete
-exercises.delete('/:id', (req, res) => {
+exercises.delete('/:id', isAuthenticated, (req, res) => {
     Exercise.findByIdAndRemove(req.params.id, (err, foundExercise) => {
         res.redirect('/exercises')
     })
 })
 
 //update
-exercises.put('/:id', (req, res) => {
+exercises.put('/:id', isAuthenticated, (req, res) => {
     Exercise.findByIdAndUpdate(
         req.params.id,
         req.body,
@@ -93,7 +108,7 @@ exercises.put('/:id', (req, res) => {
 })
 
 //create
-exercises.post('/', (req, res) => {
+exercises.post('/', isAuthenticated, (req, res) => {
     if(req.body.isHard === 'on'){
         req.body.isHard = true
     }else{

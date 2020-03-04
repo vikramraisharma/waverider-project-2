@@ -1,4 +1,4 @@
-const bcrypt  = require('bcrypt')
+const bcrypt = require('bcrypt')
 const express = require('express')
 const clients = express.Router()
 const Client = require('../models/client.js')

@@ -1,1 +1,8 @@
 .env
+controllers/trainer_controller.js
+controllers/accounts_controller.js
+models/accounts.js
+models/trainer.js
+views/accounts/
+views/trainers/
+views/sessions/new-trainer.ejs

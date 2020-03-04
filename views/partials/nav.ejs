@@ -1,18 +1,22 @@
-<a href="/exercises">Home</a>
+
 
 <ul>
+    <!-- <li>
+        <a href="/exercises" class="home-button"><button type="button" name="button">Home</button></a>
+    </li> -->
     <li>
-        <a href="/exercises/new">New Exercise</a>
+        <a href="/exercises/new"><button type="button" name="button">New Exercise</button></a>
     </li>
     <% if(currentClient){ %>
-        <li>Welcome <%= currentClient.username %></li>
+        <li id="username">Welcome <%= currentClient.username %></li>
         <li>
-            <form action="/sessions?_method==DELETE" method="post">
+            <form action="/sessions?_method=DELETE" method="post">
                 <input type="submit" value="Log Out">
             </form>
         </li>
         <% } else { %>
-            <li><a href="/users/new">Sign Up</a></li>
-            <li><a href="/sessions/new">Log In</a></li>
+            <li><a href="/clients/new"><button type="button" name="button">Sign Up!</button></a></li>
+            <li><a href="/sessions/new"><button type="button" name="button">Log In!</button></a></li>
+            <!-- <li><a href="/sessions/new-trainer">Trainer Login</a></li> -->
         <% } %>
 </ul>

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <%- include('../partials/head.ejs') %>
     </head>
     <body>
-        <h1>Enter the Proving Grounds</h1>
-        <form class="" action="/sessions" method="post">
-            <label for="username">Username:</label>
-            <input type="text" name="username" value="">
-            <label for="color">Password:</label>
-            <input type="text" name="password" value=""><br>
-            <input type="submit" name="" value="Submit">
-        </form>
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
+        <h1 class="login-header">Enter the Proving Grounds</h1>
+        <div class="form-div">
+            <form class="" action="/sessions" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" value="">
+                <br>
+                <label for="color">Password:</label>
+                <input type="text" name="password" value=""><br>
+                <br>
+                <input type="submit" class="submitbtn" value="Submit">
+            </form>
+        </div>
     </body>
 </html>
