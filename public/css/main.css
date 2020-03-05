@@ -2,13 +2,18 @@
     /* border: 1px solid red; */
     margin: 0;
     padding: 0;
-    
-
+    font-family: sans-serif;
 }
 body{
-    background-image: linear-gradient(lightgrey, black);
+    /* background-image: linear-gradient(lightgrey, black); */
+    background-color: #474747;
+}
+h1, h3, p{
+    font-family: sans-serif;
 }
 header{
+    width: 85%;
+    margin: 10px auto;
     text-align: center;
     padding: 25px;
     background-color: rgba(237, 168, 50, 0.7);
@@ -23,7 +28,9 @@ header{
 }
 h1{
     background-color: rgba(237, 168, 50, 0.1);
+    border-radius: 15px;
 }
+/* Set Nav styling */
 nav{
     padding: 15px;
     width: 60%;
@@ -44,6 +51,7 @@ nav button{
     width: 125px;
     background-color: rgba(237, 168, 50, 0.8);
     border-radius: 5px;
+    font-size: 16px;
 }
 nav button:hover{
 
@@ -58,8 +66,9 @@ nav input{
     width: 125px;
     margin: 0;
     padding: 0;
-    color: rgba(237, 168, 50, 0.8);
+    background-color: rgba(237, 168, 50, 0.8);
     border-radius: 5px;
+    font-size: 18px;
 }
 nav input:hover{
     background-color: #0b0861;
@@ -70,8 +79,18 @@ nav li{
     /* padding: 5%; */
 }
 #username{
-    padding-top: 1%;
+    height: 40px;
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #0b0861;
+    color: black;
+    background-color: rgba(237, 168, 50, 0.8);
+    border-radius: 5px;
 }
+/* end nav styling */
+
+/* begin index styling */
 .index-container{
 
     width: 50%;
@@ -104,27 +123,39 @@ nav li{
 .editbtn:hover{
     color: white;
 }
+/* end index styling */
+
+/* begin session form styling */
 .login-header{
     width: 75%;
     text-align: center;
     padding: 15px;
     margin: 15px auto;
 }
+/* form div/label also apply to new exercise pages */
 .form-div{
     width: 70%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     margin: auto;
     align-items: center;
+
 }
 .form-div form{
-    padding: 8px;
-    background-color: #474747;
+    padding: 10px;
+    background-color: #707070;
     border-radius: 7px;
+    /* background-color: #e8d9b0; */
+    border: 1px solid #0b0861;
 }
-form label{
+.form-div form label{
     background-color: #474747;
     color: rgba(237, 168, 50, 1);
+    padding: 1px;
+    margin: 20px auto;
+    border: 1px solid rgba(237, 168, 50, 1);
+    border-radius: 3px;
 }
 form input{
     margin:auto;
@@ -132,9 +163,30 @@ form input{
     color: black;
 }
 .submitbtn{
-    margin: auto;
+    margin-left: auto;
     padding: 10px;
     background-color: #0b0861;
     color: white;
     border-radius: 5px;
+}
+.information-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    background-color: #e8d9b0;
+    border-radius: 12px;
+}
+h3{
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: rgba(237, 168, 50, 1);
+    border: 1px solid #0b0861;
+    border-radius: 6px;
+}
+section{
+    width: 75%;
+    padding: 10px 20px;
+    margin: 10px auto;
 }

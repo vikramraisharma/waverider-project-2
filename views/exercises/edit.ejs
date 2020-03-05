@@ -14,13 +14,17 @@
             <form class="" action="/exercises/<%=exercise.id%>?_method=PUT" method="post">
                 <label for="name">Exercise name</label>
                 <input type="text" name="name" value="">
+                <br>
                 <label for="description">Description</label>
                 <input type="text" name="description" value="">
+                <br>
                 <label for="muscleGroup">Primary Muscle Group(s):</label>
                 <input type="text" name="muscleGroup" value="">
+                <br>
                 <label for="isHard">Advanced?</label>
                 <input type="checkbox" name="isHard" value="">
-                <input type="submit" value="SUBMIT">
+                <br>
+                <input type="submit" class="submitbtn"value="SUBMIT">
             </form>
         </div>
         <!-- <a href="/exercises">back to home</a> -->

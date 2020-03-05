@@ -11,13 +11,19 @@
             <%- include('../partials/nav.ejs') %>
         </nav>
         <div class="show-container">
-            Exercise: <%= exercise.name %> <br>
+            <!-- Exercise: <%= exercise.name %> <br> -->
             <!-- <iframe width="560" height="315" src="<%= exercise.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br> -->
             <div class="information-container">
-                Description: <%= exercise.description %> <br>
-                Primary Muscle Group(s): <%= exercise.muscleGroup %> <br>
+                <h3>Exercise: <%= exercise.name %></h3>
+                <section>
+                    <strong>Description:</strong>
+                     <%= exercise.description %> <br>
+                     <strong>Primary Muscle Group(s):</strong>
+                     <%= exercise.muscleGroup %> <br>
+                </section>
+
             </div>
-            <a href="/exercises">Back to Home</a>
+            <!-- <a href="/exercises">Back to Home</a> -->
         </div>
     </body>
 </html>

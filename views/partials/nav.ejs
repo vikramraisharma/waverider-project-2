@@ -8,9 +8,9 @@
         <a href="/exercises/new"><button type="button" name="button">New Exercise</button></a>
     </li>
     <% if(currentClient){ %>
-        <li id="username">Welcome <%= currentClient.username %></li>
+        <li id="username"><p>Welcome, <%= currentClient.username %>!</p></li>
         <li>
-            <form action="/sessions?_method=DELETE" method="post">
+            <form action="/sessions?_method=DELETE" method="post" class="logout">
                 <input type="submit" value="Log Out">
             </form>
         </li>
